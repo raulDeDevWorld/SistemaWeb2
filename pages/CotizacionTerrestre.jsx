@@ -112,7 +112,7 @@ console.log(arr)
             let object = {
                 [e.target.name]: e.target.value,
                 [`PRODUCT${index}`]: product,
-                PRODUCTOTOTAL: calc.PRODUCTOTOTAL !== undefined ? product + calc.PRODUCTOTOTAL : product
+                PRODUCTOTOTAL: arr
             }
 
             setCalc({ ...calc, ...object })
@@ -123,10 +123,22 @@ console.log(arr)
         if (e.target.name == `COSTOUNITARIO${index}` && calc[`CANTIDAD${index}`] !== undefined) {
             let product = e.target.value * calc[`CANTIDAD${index}`]
 
+let arr = Object.entries(calc)
+
+let red = arr.reduce((ac, i, index) =>{
+ let str =  i[0] 
+ 
+ let res = str.includes("PRODUCT")
+
+ return res && i[1] + ac
+}, 0)
+
+console.log(arr)
+
             let object = {
                 [e.target.name]: e.target.value,
                 [`PRODUCT${index}`]: product,
-                PRODUCTOTOTAL: calc.PRODUCTOTOTAL !== undefined ? product + calc.PRODUCTOTOTAL : product
+                PRODUCTOTOTAL: arr
 
             }
 
