@@ -105,7 +105,9 @@ let arr = Object.entries(data)
 
 let red = arr.reduce((ac, i, index) =>{
  let str =  i[0] 
- 
+  if (str.includes("TOTAL") ){
+   return ac
+ }
  let res = str.includes("PRODUCT")
 
  return res && i[1] + ac
@@ -139,7 +141,9 @@ let arr = Object.entries(data)
 
 let red = arr.reduce((ac, i, index) =>{
  let str =  i[0] 
- 
+  if (str.includes("TOTAL") ){
+   return ac
+ }
  let res = str.includes("PRODUCT")
 
  return res && i[1] + ac
