@@ -95,8 +95,11 @@ function CotizacionTerrestre() {
         if (e.target.name == `CANTIDAD${index}` && calc[`COSTOUNITARIO${index}`] !== undefined) {
             let product = e.target.value * calc[`COSTOUNITARIO${index}`]
 
+let data = {...calc, ...objet}
 
-let arr = Object.entries(calc)
+consolé.log(data)
+
+let arr = Object.entries(data)
 
 let red = arr.reduce((ac, i, index) =>{
  let str =  i[0] 
@@ -123,7 +126,11 @@ console.log(red)
         if (e.target.name == `COSTOUNITARIO${index}` && calc[`CANTIDAD${index}`] !== undefined) {
             let product = e.target.value * calc[`CANTIDAD${index}`]
 
-let arr = Object.entries(calc)
+let data = {...calc, ...objet}
+
+consolé.log(data)
+
+let arr = Object.entries(data)
 
 let red = arr.reduce((ac, i, index) =>{
  let str =  i[0] 
