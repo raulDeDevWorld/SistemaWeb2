@@ -106,13 +106,13 @@ let red = arr.reduce((ac, i, index) =>{
  return res && i[1] + ac
 }, 0)
 
-console.log(arr)
+console.log(red)
 
 
             let object = {
                 [e.target.name]: e.target.value,
                 [`PRODUCT${index}`]: product,
-                PRODUCTOTOTAL: arr
+                PRODUCTOTOTAL: red
             }
 
             setCalc({ ...calc, ...object })
@@ -133,12 +133,12 @@ let red = arr.reduce((ac, i, index) =>{
  return res && i[1] + ac
 }, 0)
 
-console.log(arr)
+console.log(red)
 
             let object = {
                 [e.target.name]: e.target.value,
                 [`PRODUCT${index}`]: product,
-                PRODUCTOTOTAL: arr
+                PRODUCTOTOTAL: red
 
             }
 
