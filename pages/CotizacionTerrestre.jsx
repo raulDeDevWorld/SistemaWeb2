@@ -96,6 +96,19 @@ function CotizacionTerrestre() {
             let product = e.target.value * calc[`COSTOUNITARIO${index}`]
 
 
+let arr = Object.entries(calc)
+
+let red = arr.reduce((ac, i, index) =>{
+ let str =  i[0] 
+ 
+ let res = str.includes("PRODUCT")
+
+ return res && i[1] + ac
+}, 0)
+
+console.log(arr)
+
+
             let object = {
                 [e.target.name]: e.target.value,
                 [`PRODUCT${index}`]: product,
