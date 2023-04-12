@@ -99,7 +99,7 @@ let data = {...calc,
 [e.target.name]: e.target.value,
 [`PRODUCT${index}`]: product,}
 
-consolé.log(data)
+console.log(data)
 
 let arr = Object.entries(data)
 
